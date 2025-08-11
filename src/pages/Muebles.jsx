@@ -21,78 +21,78 @@ import imgQ from '../media/img/muebles/87.jpeg'
 import imgR from '../media/img/muebles/88.jpeg'
 import Footer from '../components/Footer';
 import { useCart } from "../context/CartContext";
-import Car from "../components/BotonWhatsApp"
+import PrintPdf from "../components/PrintPdf"
 
 function Muebles() {
-    const { addToCart } = useCart();
+  const { addToCart } = useCart();
 
-    const scrollToProductos = () => {
-  document.getElementById("productos")?.scrollIntoView({
-    behavior: "smooth",
-  });
-};
+  const scrollToProductos = () => {
+    document.getElementById("productos")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   const productos = [
-    { imgFront: imgA, imgBack: imgB, title: "Sofá Modular Oslo"  },
-    { imgFront: imgC, imgBack: imgD, title: "Sala Esquinera Toscana"  },
-    { imgFront: imgE, imgBack: imgF, title: "Sala Verona Premium"  },
-    { imgFront: imgG, imgBack: imgH, title: "Conjunto Florencia Clásico"  },
-    { imgFront: imgI, imgBack: imgJ, title: "Sala Minimalista Kioto"  },
-    { imgFront: imgK, imgBack: imgL, title: "Sofá Chesterfield Londres"  },
-    { imgFront: imgM, imgBack: imgN, title: "Sala Contemporánea Dubai"  },
-    { imgFront: imgO, imgBack: imgP, title: "Sillón Reclinable Riviera"  },
-    { imgFront: imgQ, imgBack: imgR, title: "Sillón Relax Madrid"  },
+    { imgFront: imgA, imgBack: imgB, title: "Sofá Modular Oslo" },
+    { imgFront: imgC, imgBack: imgD, title: "Sala Esquinera Toscana" },
+    { imgFront: imgE, imgBack: imgF, title: "Sala Verona Premium" },
+    { imgFront: imgG, imgBack: imgH, title: "Conjunto Florencia Clásico" },
+    { imgFront: imgI, imgBack: imgJ, title: "Sala Minimalista Kioto" },
+    { imgFront: imgK, imgBack: imgL, title: "Sofá Chesterfield Londres" },
+    { imgFront: imgM, imgBack: imgN, title: "Sala Contemporánea Dubai" },
+    { imgFront: imgO, imgBack: imgP, title: "Sillón Reclinable Riviera" },
+    { imgFront: imgQ, imgBack: imgR, title: "Sillón Relax Madrid" },
 
   ];
-    return (
-        <PageContainer>
-            <ContentOne>
+  return (
+    <PageContainer>
+      <ContentOne>
         <Overlay>
           <TextContainer>
             <h1>Diseño y estilo para tu hogar</h1>
             <p>
-             Transforma cada rincón con muebles que combinan elegancia, funcionalidad y durabilidad. Encuentra piezas únicas que se adaptan a tu estilo de vida y crean ambientes acogedores.
+              Transforma cada rincón con muebles que combinan elegancia, funcionalidad y durabilidad. Encuentra piezas únicas que se adaptan a tu estilo de vida y crean ambientes acogedores.
             </p>
             <Button variant='contained' size='large' color='' sx={{
-              backgroundColor: "#e68b46ff", 
+              backgroundColor: "#e68b46ff",
               "&:hover": {
-                backgroundColor: "#c07032ff", 
+                backgroundColor: "#c07032ff",
               },
-            }} 
+            }}
               onClick={scrollToProductos} >Conoce nuestros productos</Button>
-               
+
           </TextContainer>
         </Overlay>
 
       </ContentOne>
-       <ContentStyle>
+      <ContentStyle>
         <Title>
-        Explora nuestros productos, estamos listos para atenderte
-        </Title>  
-
+          Explora nuestros productos, estamos listos para atenderte
+        </Title>
+        <PrintPdf pdfUrl="/docs/mueblesysalas.pdf"></PrintPdf>
       </ContentStyle>
-          <GridContainer id="productos">
-      {productos.map((p, index) => (
-        <Card key={index}>            
-          <Image img={p.imgFront} className="front" />
-          <Image img={p.imgBack} className="back" />
-          <span className="product-title">{p.title}</span>
-         <Button variant="outlined" className="add-to-cart" sx={{
-              backgroundColor: "#646464ff", 
+      <GridContainer id="productos">
+        {productos.map((p, index) => (
+          <Card key={index}>
+            <Image img={p.imgFront} className="front" />
+            <Image img={p.imgBack} className="back" />
+            <span className="product-title">{p.title}</span>
+            <Button variant="outlined" className="add-to-cart" sx={{
+              backgroundColor: "#646464ff",
               "&:hover": {
-                backgroundColor: "#8b7462ff", 
+                backgroundColor: "#8b7462ff",
               },
-            }} 
-            onClick={() => addToCart(p)} >
-      Añadir al carrito
-    </Button>
-        </Card>
-        
-      ))}
-    </GridContainer>
-    <Footer/>
-        </PageContainer>
-    );
+            }}
+              onClick={() => addToCart(p)} >
+              Añadir al carrito
+            </Button>
+          </Card>
+
+        ))}
+      </GridContainer>
+      <Footer />
+    </PageContainer>
+  );
 }
 export default Muebles;
 

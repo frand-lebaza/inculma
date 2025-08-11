@@ -128,7 +128,7 @@ function Home() {
         <Description>
           Estamos ubicados en Bogotá D.C Localidad Fontibón. <br></br>
           Carrera 102 # 17a 11 Local 2 <br></br>
-          <b>+57 3223989842 - 3138579718 - 3228102395</b>
+          <b>+57 3144598004 - 3133581513</b>
 
         </Description>
         <MapContainer>

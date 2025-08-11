@@ -21,6 +21,7 @@ import imgQ from '../media/img/salas/sala17.jpeg'
 import imgR from '../media/img/salas/sala18.jpeg'
 import Footer from '../components/Footer';
 import { useCart } from "../context/CartContext";
+import PrintPdf from "../components/PrintPdf"
 
 function Salas() {
   const { addToCart } = useCart();
@@ -67,7 +68,7 @@ function Salas() {
         <Title>
           Explora nuestros productos, estamos listos para atenderte
         </Title>
-
+        <PrintPdf pdfUrl="/docs/mueblesysalas.pdf"></PrintPdf>
       </ContentStyle>
       <GridContainer id="productos">
         {productos.map((p, index) => (

@@ -21,78 +21,78 @@ import imgQ from '../media/img/sofacamas/s17.jpeg'
 import imgR from '../media/img/sofacamas/s18.jpeg'
 import Footer from '../components/Footer';
 import { useCart } from "../context/CartContext";
-import Car from "../components/BotonWhatsApp"
+import PrintPdf from "../components/PrintPdf"
 
 function SofaCama() {
-  
-    const { addToCart } = useCart();
 
-    const scrollToProductos = () => {
-  document.getElementById("productos")?.scrollIntoView({
-    behavior: "smooth",
-  });
-};
+  const { addToCart } = useCart();
+
+  const scrollToProductos = () => {
+    document.getElementById("productos")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   const productos = [
-    { imgFront: imgA, imgBack: imgB, title: "Sofá Cama Verona Comfort"  },
-    { imgFront: imgC, imgBack: imgD, title: "Sofá Cama Oslo Premium"  },
-    { imgFront: imgE, imgBack: imgF, title: "Sofá Cama Turín Multifuncional"  },
-    { imgFront: imgG, imgBack: imgH, title: "Sofá Cama Madrid Relax"  },
-    { imgFront: imgI, imgBack: imgJ, title: "Sofá Cama Estocolmo Plus"  },
-    { imgFront: imgK, imgBack: imgL, title: "Sofá Cama Firenze Deluxe"  },
-    { imgFront: imgM, imgBack: imgN, title: "Sofá Cama Berlín Práctico"  },
-    { imgFront: imgO, imgBack: imgP, title: "Sofá Cama Lisboa Versátila"  },
-    { imgFront: imgQ, imgBack: imgR, title: "Sofá Cama Roma Elegance"  },
+    { imgFront: imgA, imgBack: imgB, title: "Sofá Cama Verona Comfort" },
+    { imgFront: imgC, imgBack: imgD, title: "Sofá Cama Oslo Premium" },
+    { imgFront: imgE, imgBack: imgF, title: "Sofá Cama Turín Multifuncional" },
+    { imgFront: imgG, imgBack: imgH, title: "Sofá Cama Madrid Relax" },
+    { imgFront: imgI, imgBack: imgJ, title: "Sofá Cama Estocolmo Plus" },
+    { imgFront: imgK, imgBack: imgL, title: "Sofá Cama Firenze Deluxe" },
+    { imgFront: imgM, imgBack: imgN, title: "Sofá Cama Berlín Práctico" },
+    { imgFront: imgO, imgBack: imgP, title: "Sofá Cama Lisboa Versátila" },
+    { imgFront: imgQ, imgBack: imgR, title: "Sofá Cama Roma Elegance" },
 
   ];
-    return (
-        <PageContainer>
-            <ContentOne>
+  return (
+    <PageContainer>
+      <ContentOne>
         <Overlay>
           <TextContainer>
             <h1>Versatilidad sin perder el estilo</h1>
             <p>
-             Descubre la solución perfecta para espacios reducidos o visitas inesperadas. Nuestros sofá camas ofrecen comodidad para sentarse y descansar, sin comprometer la estética de tu hogar.
+              Descubre la solución perfecta para espacios reducidos o visitas inesperadas. Nuestros sofá camas ofrecen comodidad para sentarse y descansar, sin comprometer la estética de tu hogar.
             </p>
             <Button variant='contained' size='large' color='' sx={{
-              backgroundColor: "#e68b46ff", 
+              backgroundColor: "#e68b46ff",
               "&:hover": {
-                backgroundColor: "#c07032ff", 
+                backgroundColor: "#c07032ff",
               },
-            }} 
-               onClick={scrollToProductos}>Conoce nuestros productos</Button>
+            }}
+              onClick={scrollToProductos}>Conoce nuestros productos</Button>
           </TextContainer>
         </Overlay>
 
       </ContentOne>
-       <ContentStyle>
+      <ContentStyle>
         <Title>
-        Explora nuestros productos, estamos listos para atenderte
-        </Title>  
-
+          Explora nuestros productos, estamos listos para atenderte
+        </Title>
+        <PrintPdf pdfUrl="/docs/mueblesysalas.pdf"></PrintPdf>
       </ContentStyle>
-          <GridContainer id="productos">
-      {productos.map((p, index) => (
-        <Card key={index}>            
-          <Image img={p.imgFront} className="front" />
-          <Image img={p.imgBack} className="back" />
-          <span className="product-title">{p.title}</span>
-         <Button variant="outlined" className="add-to-cart" sx={{
-              backgroundColor: "#646464ff", 
+      <GridContainer id="productos">
+        {productos.map((p, index) => (
+          <Card key={index}>
+            <Image img={p.imgFront} className="front" />
+            <Image img={p.imgBack} className="back" />
+            <span className="product-title">{p.title}</span>
+            <Button variant="outlined" className="add-to-cart" sx={{
+              backgroundColor: "#646464ff",
               "&:hover": {
-                backgroundColor: "#8b7462ff", 
+                backgroundColor: "#8b7462ff",
               },
-            }} 
-            onClick={() => addToCart(p)} >
-      Añadir al carrito
-    </Button>
-        </Card>
-        
-      ))}
-    </GridContainer>
-    <Footer/>
-        </PageContainer>
-    );
+            }}
+              onClick={() => addToCart(p)} >
+              Añadir al carrito
+            </Button>
+          </Card>
+
+        ))}
+      </GridContainer>
+      <Footer />
+    </PageContainer>
+  );
 }
 export default SofaCama;
 

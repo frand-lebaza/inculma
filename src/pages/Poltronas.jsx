@@ -21,77 +21,77 @@ import imgQ from '../media/img/poltronas/S26.jpeg'
 import imgR from '../media/img/poltronas/S23.jpeg'
 import Footer from '../components/Footer';
 import { useCart } from "../context/CartContext";
-import Car from "../components/BotonWhatsApp"
+import PrintPdf from "../components/PrintPdf"
 
 function Poltronas() {
-   const { addToCart } = useCart();
+  const { addToCart } = useCart();
 
-    const scrollToProductos = () => {
-  document.getElementById("productos")?.scrollIntoView({
-    behavior: "smooth",
-  });
-};
+  const scrollToProductos = () => {
+    document.getElementById("productos")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   const productos = [
-    { imgFront: imgA, imgBack: imgB, title: "Poltrona Milano Luxe"  },
-    { imgFront: imgC, imgBack: imgD, title: "Silla Escandinava Bergen"  },
-    { imgFront: imgE, imgBack: imgF, title: "Poltrona Reclinable Amalfi"  },
-    { imgFront: imgG, imgBack: imgH, title: "Silla Vintage Praga"  },
-    { imgFront: imgI, imgBack: imgJ, title: "Poltrona Moderna Capri"  },
-    { imgFront: imgK, imgBack: imgL, title: "Silla Nórdica Estocolmo"  },
-    { imgFront: imgM, imgBack: imgN, title: "Poltrona Acolchada Savona"  },
-    { imgFront: imgO, imgBack: imgP, title: "Silla Industrial Boston"  },
-    { imgFront: imgQ, imgBack: imgR, title: "Poltrona Chesterfield París"  },
+    { imgFront: imgA, imgBack: imgB, title: "Poltrona Milano Luxe" },
+    { imgFront: imgC, imgBack: imgD, title: "Silla Escandinava Bergen" },
+    { imgFront: imgE, imgBack: imgF, title: "Poltrona Reclinable Amalfi" },
+    { imgFront: imgG, imgBack: imgH, title: "Silla Vintage Praga" },
+    { imgFront: imgI, imgBack: imgJ, title: "Poltrona Moderna Capri" },
+    { imgFront: imgK, imgBack: imgL, title: "Silla Nórdica Estocolmo" },
+    { imgFront: imgM, imgBack: imgN, title: "Poltrona Acolchada Savona" },
+    { imgFront: imgO, imgBack: imgP, title: "Silla Industrial Boston" },
+    { imgFront: imgQ, imgBack: imgR, title: "Poltrona Chesterfield París" },
 
   ];
-    return (
-       <PageContainer>
-            <ContentOne>
+  return (
+    <PageContainer>
+      <ContentOne>
         <Overlay>
           <TextContainer>
             <h1>El rincón perfecto para tu descanso</h1>
             <p>
-             Relájate con nuestras poltronas diseñadas para ofrecerte el máximo confort. Desde modelos clásicos hasta modernos, cada una es una invitación a disfrutar de tu tiempo libre con estilo.
+              Relájate con nuestras poltronas diseñadas para ofrecerte el máximo confort. Desde modelos clásicos hasta modernos, cada una es una invitación a disfrutar de tu tiempo libre con estilo.
             </p>
             <Button variant='contained' size='large' color='' sx={{
-              backgroundColor: "#e68b46ff", 
+              backgroundColor: "#e68b46ff",
               "&:hover": {
-                backgroundColor: "#c07032ff", 
+                backgroundColor: "#c07032ff",
               },
-            }} 
-               onClick={scrollToProductos} >Conoce nuestros productos</Button>
+            }}
+              onClick={scrollToProductos} >Conoce nuestros productos</Button>
           </TextContainer>
         </Overlay>
 
       </ContentOne>
-       <ContentStyle>
+      <ContentStyle>
         <Title>
-        Explora nuestros productos, estamos listos para atenderte
-        </Title>  
-
+          Explora nuestros productos, estamos listos para atenderte
+        </Title>
+        <PrintPdf pdfUrl="/docs/sillasypoltronas.pdf"></PrintPdf>
       </ContentStyle>
-          <GridContainer id="productos">
-      {productos.map((p, index) => (
-        <Card key={index}>            
-          <Image img={p.imgFront} className="front" />
-          <Image img={p.imgBack} className="back" />
-          <span className="product-title">{p.title}</span>
-         <Button variant="outlined" className="add-to-cart" sx={{
-              backgroundColor: "#646464ff", 
+      <GridContainer id="productos">
+        {productos.map((p, index) => (
+          <Card key={index}>
+            <Image img={p.imgFront} className="front" />
+            <Image img={p.imgBack} className="back" />
+            <span className="product-title">{p.title}</span>
+            <Button variant="outlined" className="add-to-cart" sx={{
+              backgroundColor: "#646464ff",
               "&:hover": {
-                backgroundColor: "#8b7462ff", 
+                backgroundColor: "#8b7462ff",
               },
-            }} 
-            onClick={() => addToCart(p)} >
-      Añadir al carrito
-    </Button>
-        </Card>
-        
-      ))}
-    </GridContainer>
-    <Footer/>
-        </PageContainer>
-    );
+            }}
+              onClick={() => addToCart(p)} >
+              Añadir al carrito
+            </Button>
+          </Card>
+
+        ))}
+      </GridContainer>
+      <Footer />
+    </PageContainer>
+  );
 }
 export default Poltronas;
 
