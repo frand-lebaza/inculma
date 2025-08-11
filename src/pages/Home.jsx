@@ -13,11 +13,11 @@ import Footer from '../components/Footer';
 import AnimatedButton from '../components/AnimatedButton';
 
 function Home() {
-const scrollToProductos = () => {
-  document.getElementById("productos")?.scrollIntoView({
-    behavior: "smooth",
-  });
-};
+  const scrollToProductos = () => {
+    document.getElementById("productos")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <PageContainer>
       <ContentOne>
@@ -28,12 +28,12 @@ const scrollToProductos = () => {
               Descubre nuestra colección de salas, comedores, muebles y sillas con el mejor estilo y calidad.
             </p>
             <Button variant='contained' size='large' color='' sx={{
-              backgroundColor: "#e68b46ff", 
+              backgroundColor: "#e68b46ff",
               "&:hover": {
-                backgroundColor: "#c07032ff", 
+                backgroundColor: "#c07032ff",
               },
-            }} 
-               onClick={scrollToProductos}>Conoce nuestros productos</Button>
+            }}
+              onClick={scrollToProductos}>Conoce nuestros productos</Button>
           </TextContainer>
         </Overlay>
 
@@ -41,9 +41,9 @@ const scrollToProductos = () => {
       <ContentStyle>
         <Title>
           DESCUBRE LOS MEJORES PRODUCTOS PARA CADA ESPACIO DE TU HOGAR
-        </Title>       
+        </Title>
       </ContentStyle>
-      <ContentTwo  id="productos">
+      <ContentTwo id="productos">
         {/* Fila 1: ocupa las 3 columnas */}
         <CollageItem
           style={{
@@ -53,8 +53,8 @@ const scrollToProductos = () => {
           }}
         >
           <OverlayImg>
-            
-            <AnimatedButton  title="muebles y salas" link="/muebles"/>
+
+            <AnimatedButton title="muebles y salas" link="/muebles" />
           </OverlayImg>
         </CollageItem>
 
@@ -67,33 +67,33 @@ const scrollToProductos = () => {
           }}
         >
           <OverlayImg>
-            
-            <AnimatedButton  title="poltronas" link="/poltronas"/>
+
+            <AnimatedButton title="poltronas" link="/poltronas" />
           </OverlayImg>
         </CollageItem>
 
         {/* Fila 3: tres divs independientes */}
         <CollageItem style={{ backgroundImage: `url(${silla})` }} >
           <OverlayImg>
-            
-            <AnimatedButton  title="sillas" link="/poltronas"/>
+
+            <AnimatedButton title="sillas" link="/poltronas" />
           </OverlayImg>
         </CollageItem>
         <CollageItem style={{ backgroundImage: `url(${comedor})` }} >
           <OverlayImg>
-            
-            <AnimatedButton  title="comedores" link="comedores"/>
+
+            <AnimatedButton title="comedores" link="comedores" />
           </OverlayImg>
         </CollageItem>
         <CollageItem style={{ backgroundImage: `url(${sofaCama})` }} >
           <OverlayImg>
-            
-            <AnimatedButton  title="sofa-cama" link="/sofa-camas"/>
+
+            <AnimatedButton title="sofa-cama" link="/sofa-camas" />
           </OverlayImg>
         </CollageItem>
       </ContentTwo>
 
-      <ContentThree>
+      <ContentThree id='nosotros'>
         <ContentStyle>
           <Title>Sobre Nosotros </Title>
           <Logo src={logo} alt="Logo empresa" />
@@ -101,8 +101,8 @@ const scrollToProductos = () => {
             En Muebles InCulma creamos espacios acogedores y con estilo.
             Nuestro compromiso es ofrecer muebles de alta calidad, con diseños
             únicos que combinan comodidad y elegancia. <br></br>
-             Realizamos todo tipo de muebles para tu hogar u oficina. También refaccionamos tus muebles usados. Somos fabricantes y diseñadores con más de 25 años de experiencia
-          </Description>          
+            Realizamos todo tipo de muebles para tu hogar u oficina. También refaccionamos tus muebles usados. Somos fabricantes y diseñadores con más de 25 años de experiencia
+          </Description>
         </ContentStyle>
         <ContentStyle>
           <Title>Horario de atención </Title>
@@ -110,7 +110,7 @@ const scrollToProductos = () => {
           <Description>
             Lunes a Viernes: 09:30 a.m - 7:30 p.m  <br></br>
             Fines de Semana y Festivos: 10:00 a.m - 03:30 p.m  <br></br>
-            Atención en jornada continua<br></br>            
+            Atención en jornada continua<br></br>
           </Description>
           <Description>
             Puedes encontrarnos en nuestras redes sociales y seguir de cerca las mejores ofertas y nuevos productos.
@@ -118,11 +118,11 @@ const scrollToProductos = () => {
           <Socials>
             <a href="https://www.facebook.com/share/1GnTDPxLAK/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
             <a href="https://www.instagram.com/mueblesinculma?igsh=a2x5ZWx0NDkxaGRl&utm_source=qr" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://www.tiktok.com/@muebles.inculma?_t=ZS-8ylWbVKnvs2&_r=1" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>            
+            <a href="https://www.tiktok.com/@muebles.inculma?_t=ZS-8ylWbVKnvs2&_r=1" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
           </Socials>
         </ContentStyle>
       </ContentThree>
-      <ContentFour>
+      <ContentFour id='contacto'>
         <Title>Visita nuestras instalaciones </Title>
 
         <Description>
@@ -135,7 +135,7 @@ const scrollToProductos = () => {
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7953.065173505887!2d-74.142352!3d4.677076!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c8de7df6315%3A0x3ea1aee9d7067d2b!2sCra.%20102%20%2321-07%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1754843925734!5m2!1ses!2sco" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </MapContainer>
       </ContentFour>
-      <Footer/>
+      <Footer />
     </PageContainer>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import logo1 from '../media/img/logo/logoBlanco.png';
 import logo2 from '../media/img/logo/logo3.png'; // Logo alternativo
@@ -8,7 +8,9 @@ import CarritoDrawer from "./CarritoDrawer";
 function NavBar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const navRef = useRef(null); // Referencia al contenedor del nav
+  const navRef = useRef(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // Detectar scroll
   useEffect(() => {
@@ -32,38 +34,74 @@ function NavBar() {
       }
     };
 
-    // Solo agregar el listener si el menú está abierto
     if (open) {
       document.addEventListener("mousedown", handleClickOutside);
     }
 
-    // Cleanup del listener
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [open]);
 
+  // Función para navegar a secciones
+  const handleSectionClick = (sectionId) => {
+    setOpen(false); // Cerrar menú móvil
+
+    if (location.pathname === '/') {
+      // Si ya estamos en home, solo hacer scroll
+      scrollToSection(sectionId);
+    } else {
+      // Si estamos en otra página, navegar a home y luego hacer scroll
+      navigate('/');
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 100);
+    }
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <Nav ref={navRef} scrolled={scrolled}>
-       <Hamburger onClick={() => setOpen(!open)} scrolled={scrolled}>
-          <span />
-          <span />
-          <span />
-        </Hamburger>
+      <Hamburger onClick={() => setOpen(!open)} scrolled={scrolled}>
+        <span />
+        <span />
+        <span />
+      </Hamburger>
       <Logo to="/">
         <img src={scrolled ? logo2 : logo1} alt="Logo" />
       </Logo>
-      <div className="car-shop">       
+      <div className="car-shop">
 
         <NavLinks open={open} scrolled={scrolled}>
-
-          <NavLink scrolled={scrolled} to="/muebles">Muebles</NavLink>
-          <NavLink scrolled={scrolled} to="/poltronas">Poltronas</NavLink>
+          <NavLink scrolled={scrolled} to="/" onClick={() => setOpen(false)}>Inicio</NavLink>
+          <NavLink scrolled={scrolled} to="/muebles" onClick={() => setOpen(false)}>Muebles</NavLink>
+          <NavLink scrolled={scrolled} to="/poltronas" onClick={() => setOpen(false)}>Poltronas</NavLink>
           {/* <NavLink scrolled={scrolled} to="/sillas">Sillas</NavLink> */}
-          <NavLink scrolled={scrolled} to="/comedores">Comedores</NavLink>
-          <NavLink scrolled={scrolled} to="/sofa-camas">Sofa Camas</NavLink>
-          <NavLink scrolled={scrolled} to="/muebles">Nosotros</NavLink>
-          <NavLink scrolled={scrolled} to="/muebles">Contacto</NavLink>
+          <NavLink scrolled={scrolled} to="/comedores" onClick={() => setOpen(false)}>Comedores</NavLink>
+          <NavLink scrolled={scrolled} to="/sofa-camas" onClick={() => setOpen(false)}>Sofa Camas</NavLink>
+
+          {/* Links que van a secciones en Home */}
+          <SectionLink
+            scrolled={scrolled}
+            onClick={() => handleSectionClick('nosotros')}
+          >
+            Nosotros
+          </SectionLink>
+          <SectionLink
+            scrolled={scrolled}
+            onClick={() => handleSectionClick('contacto')}
+          >
+            Contacto
+          </SectionLink>
         </NavLinks>
 
         <CarritoDrawer />
@@ -88,13 +126,13 @@ const Nav = styled.nav`
   align-items: center;  
   z-index: 1000;
   height: 40px;
-  border-bottom:  ${({ scrolled }) => (scrolled ? "1px solid #2422224d" : "")};
+  border-bottom: ${({ scrolled }) => (scrolled ? "1px solid #2422224d" : "")};
   transition: all 0.3s ease;
 
   .car-shop{
     display: flex;
-  justify-content: end;
-  align-items: center; 
+    justify-content: end;
+    align-items: center; 
   }
 `;
 
@@ -110,12 +148,12 @@ const Logo = styled(Link)`
 const NavLinks = styled.ul`
   list-style: none;
   display: flex;
-  gap: 3px;
+  gap: 1.5rem;
   font-size: 16px;
 
   @media (max-width: 768px) {
     position: absolute;
-    top: 49px;
+    top: 64px;
     left: 0;
     right: 0;
     background-color: ${({ scrolled }) => (scrolled ? "#f0f0f0" : "#333")};
@@ -125,7 +163,7 @@ const NavLinks = styled.ul`
   }
 `;
 
-// Enlace individual
+// Enlace individual (para rutas)
 const NavLink = styled(Link)`
   cursor: pointer;
   text-decoration: none;
@@ -134,11 +172,25 @@ const NavLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center; 
-  padding: 10px;
 
   &:hover {
     color: ${({ scrolled }) => (scrolled ? "#555" : "#ddd")};
-  }    
+  }
+`;
+
+// Enlace para secciones (no es un Link de React Router)
+const SectionLink = styled.div`
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color: ${({ scrolled }) => (scrolled ? "black" : "white")};
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+
+  &:hover {
+    color: ${({ scrolled }) => (scrolled ? "#555" : "#ddd")};
+  }
 `;
 
 // Botón hamburguesa

@@ -6,7 +6,7 @@ function BotonWhatsApp() {
   const { cartCount, cartItems } = useCart();
 
   const enviarWhatsApp = () => {
-    const numero = "573103468623";
+    const numero = "573144598004";
     const mensaje = `Hola, quiero comprar estos productos:\n\n${cartItems
       .map((item) => `- ${item.title}`)
       .join("\n")}`;
