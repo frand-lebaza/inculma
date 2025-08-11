@@ -54,7 +54,7 @@ function Home() {
         >
           <OverlayImg>
 
-            <AnimatedButton title="muebles y salas" link="/muebles" />
+            <AnimatedButton title="muebles" link="/muebles" />
           </OverlayImg>
         </CollageItem>
 
@@ -76,7 +76,7 @@ function Home() {
         <CollageItem style={{ backgroundImage: `url(${silla})` }} >
           <OverlayImg>
 
-            <AnimatedButton title="sillas" link="/poltronas" />
+            <AnimatedButton title="salas" link="/salas" />
           </OverlayImg>
         </CollageItem>
         <CollageItem style={{ backgroundImage: `url(${comedor})` }} >

@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import Muebles from "./pages/Muebles"
 import Poltronas from "./pages/Poltronas"
-import Sillas from "./pages/Sillas"
+import Salas from "./pages/Salas"
 import Comedores from "./pages/Comedor"
 import SofaCamas from "./pages/SofaCama"
 import ResponsiveAppBar from "./components/NavBar"
@@ -28,7 +28,7 @@ function App() {
         <Route path="/" element={<Home />}  />
         <Route path="/muebles" element={<Muebles />}  />
         <Route path="/poltronas" element={<Poltronas />}  />
-        <Route path="/sillas" element={<Sillas />}  />
+        <Route path="/salas" element={<Salas />}  />
         <Route path="/comedores" element={<Comedores />}  />
         <Route path="/sofa-camas" element={<SofaCamas />}  />
       </Routes>    

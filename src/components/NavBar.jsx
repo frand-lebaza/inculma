@@ -85,7 +85,7 @@ function NavBar() {
           <NavLink scrolled={scrolled} to="/" onClick={() => setOpen(false)}>Inicio</NavLink>
           <NavLink scrolled={scrolled} to="/muebles" onClick={() => setOpen(false)}>Muebles</NavLink>
           <NavLink scrolled={scrolled} to="/poltronas" onClick={() => setOpen(false)}>Poltronas</NavLink>
-          {/* <NavLink scrolled={scrolled} to="/sillas">Sillas</NavLink> */}
+          <NavLink scrolled={scrolled} to="/salas">Salas</NavLink>
           <NavLink scrolled={scrolled} to="/comedores" onClick={() => setOpen(false)}>Comedores</NavLink>
           <NavLink scrolled={scrolled} to="/sofa-camas" onClick={() => setOpen(false)}>Sofa Camas</NavLink>
 
