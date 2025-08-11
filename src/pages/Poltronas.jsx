@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Button } from '@mui/material';
-import img1 from '../media/img/poltronas/s14.jpeg'
+import img1 from '../media/img/poltronas/S14.jpeg'
 import imgA from '../media/img/poltronas/S1.jpeg'
 import imgB from '../media/img/poltronas/S2.jpeg'
 import imgC from '../media/img/poltronas/s7.jpeg'
