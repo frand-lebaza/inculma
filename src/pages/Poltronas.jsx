@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Button } from '@mui/material';
 import img1 from '../media/img/poltronas/S14.jpeg'
 import imgA from '../media/img/poltronas/S1.jpeg'
-import imgB from '../media/img/poltronas/S2.jpeg'
+import imgB from '../media/img/poltronas/s2.jpeg'
 import imgC from '../media/img/poltronas/s7.jpeg'
 import imgD from '../media/img/poltronas/s9.jpeg'
 import imgE from '../media/img/poltronas/p1.jpeg'
@@ -14,11 +14,11 @@ import imgJ from '../media/img/poltronas/s12.jpeg'
 import imgK from '../media/img/poltronas/s9.jpeg'
 import imgL from '../media/img/poltronas/s10.jpeg'
 import imgM from '../media/img/poltronas/s7.jpeg'
-import imgN from '../media/img/poltronas/s17.jpeg'
-import imgO from '../media/img/poltronas/s18.jpeg'
-import imgP from '../media/img/poltronas/s19.jpeg'
-import imgQ from '../media/img/poltronas/s26.jpeg'
-import imgR from '../media/img/poltronas/s23.jpeg'
+import imgN from '../media/img/poltronas/S17.jpeg'
+import imgO from '../media/img/poltronas/S18.jpeg'
+import imgP from '../media/img/poltronas/S19.jpeg'
+import imgQ from '../media/img/poltronas/S26.jpeg'
+import imgR from '../media/img/poltronas/S23.jpeg'
 import Footer from '../components/Footer';
 import { useCart } from "../context/CartContext";
 import Car from "../components/BotonWhatsApp"
