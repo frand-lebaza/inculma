@@ -34,14 +34,14 @@ function Muebles() {
 
   const productos = [
     { imgFront: imgA, imgBack: imgB, title: "Sofá Modular Oslo" },
-    { imgFront: imgC, imgBack: imgD, title: "Sala Esquinera Toscana" },
-    { imgFront: imgE, imgBack: imgF, title: "Sala Verona Premium" },
-    { imgFront: imgG, imgBack: imgH, title: "Conjunto Florencia Clásico" },
-    { imgFront: imgI, imgBack: imgJ, title: "Sala Minimalista Kioto" },
+    { imgFront: imgC, imgBack: imgD, title: "Sofá Esquinera Toscana" },
+    { imgFront: imgE, imgBack: imgF, title: "Sofá Verona Premium" },
+    { imgFront: imgG, imgBack: imgH, title: "Sofá Florencia Clásico" },
+    { imgFront: imgI, imgBack: imgJ, title: "Sofá Minimalista Kioto" },
     { imgFront: imgK, imgBack: imgL, title: "Sofá Chesterfield Londres" },
-    { imgFront: imgM, imgBack: imgN, title: "Sala Contemporánea Dubai" },
-    { imgFront: imgO, imgBack: imgP, title: "Sillón Reclinable Riviera" },
-    { imgFront: imgQ, imgBack: imgR, title: "Sillón Relax Madrid" },
+    { imgFront: imgM, imgBack: imgN, title: "Sofá Contemporánea Dubai" },
+    { imgFront: imgO, imgBack: imgP, title: "Sofá Relax Riviera" },
+    { imgFront: imgQ, imgBack: imgR, title: "Sofá Reclinable Madrid" },
 
   ];
   return (
@@ -69,7 +69,7 @@ function Muebles() {
         <Title>
           Explora nuestros productos, estamos listos para atenderte
         </Title>
-        <PrintPdf pdfUrl="/docs/mueblesysalas.pdf"></PrintPdf>
+        <PrintPdf pdfUrl="/docs/catalogomuebles.pdf"></PrintPdf>
       </ContentStyle>
       <GridContainer id="productos">
         {productos.map((p, index) => (

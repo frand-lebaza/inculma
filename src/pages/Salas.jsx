@@ -33,14 +33,14 @@ function Salas() {
   };
 
   const productos = [
-    { imgFront: imgA, imgBack: imgB, title: "Sala Elegance" },
+    { imgFront: imgA, imgBack: imgB, title: "Sala Chester" },
     { imgFront: imgC, imgBack: imgD, title: "Sala Moderno Chic" },
     { imgFront: imgE, imgBack: imgF, title: "Sala Aurora" },
-    { imgFront: imgG, imgBack: imgH, title: "Sala Nova" },
+    { imgFront: imgG, imgBack: imgH, title: "Sala Estanfor" },
     { imgFront: imgI, imgBack: imgJ, title: "Sala Infinity" },
     { imgFront: imgK, imgBack: imgL, title: " Sala Harmony" },
     { imgFront: imgM, imgBack: imgN, title: "Sala Urban Style " },
-    { imgFront: imgO, imgBack: imgP, title: " Sala Contempo" },
+    { imgFront: imgO, imgBack: imgP, title: " Sala Nube" },
     { imgFront: imgQ, imgBack: imgR, title: "Sala Classic Luxe" },
 
   ];
@@ -68,7 +68,7 @@ function Salas() {
         <Title>
           Explora nuestros productos, estamos listos para atenderte
         </Title>
-        <PrintPdf pdfUrl="/docs/mueblesysalas.pdf"></PrintPdf>
+        <PrintPdf pdfUrl="/docs/catalogosalas.pdf"></PrintPdf>
       </ContentStyle>
       <GridContainer id="productos">
         {productos.map((p, index) => (

@@ -69,7 +69,7 @@ function SofaCama() {
         <Title>
           Explora nuestros productos, estamos listos para atenderte
         </Title>
-        <PrintPdf pdfUrl="/docs/mueblesysalas.pdf"></PrintPdf>
+        <PrintPdf pdfUrl="/docs/catalogosofacamas.pdf"></PrintPdf>
       </ContentStyle>
       <GridContainer id="productos">
         {productos.map((p, index) => (

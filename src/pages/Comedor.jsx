@@ -33,15 +33,15 @@ function Comedor() {
   };
 
   const productos = [
-    { imgFront: imgA, imgBack: imgB, title: "Sofá Modular Oslo" },
-    { imgFront: imgC, imgBack: imgD, title: "Sala Esquinera Toscana" },
-    { imgFront: imgE, imgBack: imgF, title: "Sala Verona Premium" },
-    { imgFront: imgG, imgBack: imgH, title: "Conjunto Florencia Clásico" },
-    { imgFront: imgI, imgBack: imgJ, title: "Sala Minimalista Kioto" },
-    { imgFront: imgK, imgBack: imgL, title: "Sofá Chesterfield Londres" },
-    { imgFront: imgM, imgBack: imgN, title: "Sala Contemporánea Dubai" },
-    { imgFront: imgO, imgBack: imgP, title: "Sillón Reclinable Riviera" },
-    { imgFront: imgQ, imgBack: imgR, title: "Sillón Relax Madrid" },
+    { imgFront: imgA, imgBack: imgB, title: "Comedor Rústico Noble" },
+    { imgFront: imgC, imgBack: imgD, title: "Comedor Transparencia Moderna" },
+    { imgFront: imgE, imgBack: imgF, title: "Comedor Elegancia Brillante" },
+    { imgFront: imgG, imgBack: imgH, title: "Comedor Línea Vintage" },
+    { imgFront: imgI, imgBack: imgJ, title: "Comedor Encanto Colonial" },
+    { imgFront: imgK, imgBack: imgL, title: "Comedor Minimal Warm" },
+    { imgFront: imgM, imgBack: imgN, title: "Comedor Clásico Contempoi" },
+    { imgFront: imgO, imgBack: imgP, title: "Comedor Luminiscencia" },
+    { imgFront: imgQ, imgBack: imgR, title: "Comedor Estilo Campestre" },
 
   ];
   return (
@@ -68,7 +68,7 @@ function Comedor() {
         <Title>
           Explora nuestros productos, estamos listos para atenderte
         </Title>
-        <PrintPdf pdfUrl="/docs/comedores.pdf"></PrintPdf>
+        <PrintPdf pdfUrl="/docs/catalogocomedores.pdf"></PrintPdf>
       </ContentStyle>
       <GridContainer id="productos">
         {productos.map((p, index) => (

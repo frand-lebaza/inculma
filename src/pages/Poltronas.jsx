@@ -33,9 +33,9 @@ function Poltronas() {
   };
 
   const productos = [
-    { imgFront: imgA, imgBack: imgB, title: "Poltrona Milano Luxe" },
+    { imgFront: imgA, imgBack: imgB, title: "Poltrona Reclinable Luxe" },
     { imgFront: imgC, imgBack: imgD, title: "Silla Escandinava Bergen" },
-    { imgFront: imgE, imgBack: imgF, title: "Poltrona Reclinable Amalfi" },
+    { imgFront: imgE, imgBack: imgF, title: "Poltrona Amalfi" },
     { imgFront: imgG, imgBack: imgH, title: "Silla Vintage Praga" },
     { imgFront: imgI, imgBack: imgJ, title: "Poltrona Moderna Capri" },
     { imgFront: imgK, imgBack: imgL, title: "Silla Nórdica Estocolmo" },
