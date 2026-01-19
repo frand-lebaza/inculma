@@ -8,7 +8,7 @@ export default function SocialFloatingButtons() {
     <Container>
       {/* WhatsApp visible siempre */}
       <Button
-        href="https://wa.link/52ku57"
+        href="https://wa.link/m9hwwm"
         target="_blank"
         rel="noopener noreferrer"
         bg="#25D366"

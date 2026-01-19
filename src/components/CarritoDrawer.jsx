@@ -13,7 +13,7 @@ export default function CarritoDrawer() {
   const toggleDrawer = (state) => setOpen(state);
 
   const enviarWhatsApp = () => {
-    const numero = "573144598004";
+    const numero = "573150494180";
     const mensaje = `Hola, quiero comprar estos productos:\n\n${cartItems
       .map((item) => `- ${item.title}`)
       .join("\n")}`;

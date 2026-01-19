@@ -126,13 +126,13 @@ function Home() {
         <Title>Visita nuestras instalaciones </Title>
 
         <Description>
-          Estamos ubicados en Bogotá D.C Localidad Fontibón. <br></br>
-          Carrera 102 # 17a 11 Local 2 <br></br>
-          <b>+57 3144598004 - 3133581513</b>
+          Estamos ubicados en Pitalito - Huila. <br></br>
+          Cl. 10 #1 98 <br></br>
+          <b>+57 315 0494180</b>
 
         </Description>
         <MapContainer>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7953.065173505887!2d-74.142352!3d4.677076!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c8de7df6315%3A0x3ea1aee9d7067d2b!2sCra.%20102%20%2321-07%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1754843925734!5m2!1ses!2sco" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d996.9336295097227!2d-76.04221707153835!3d1.851860340287355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e250b7fb1c9f729%3A0xad787aaa3e10eaeb!2sCl.%2010%20%23%201-98%2C%20Pitalito%2C%20Huila!5e0!3m2!1ses!2sco!4v1768782791609!5m2!1ses!2sco" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </MapContainer>
       </ContentFour>
       <Footer />
