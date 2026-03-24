@@ -19,7 +19,7 @@ export default function SocialFloatingButtons() {
       {/* Facebook */}
       <SocialButton
         className="social"
-        href="https://www.facebook.com/share/1GnTDPxLAK/?mibextid=wwXIfr"
+        href="https://www.facebook.com/share/1CmecpqJcs/?mibextid=wwXIfr"
         target="_blank"
         rel="noopener noreferrer"
         bg="#3b5998"
@@ -30,7 +30,7 @@ export default function SocialFloatingButtons() {
       {/* Instagram */}
       <SocialButton
         className="social"
-        href="https://www.instagram.com/mueblesinculma?igsh=a2x5ZWx0NDkxaGRl&utm_source=qr"
+        href="https://www.instagram.com/muebles_confortex"
         target="_blank"
         rel="noopener noreferrer"
         bg="#E1306C"
@@ -41,7 +41,7 @@ export default function SocialFloatingButtons() {
       {/* TikTok */}
       <SocialButton
         className="social"
-        href="https://www.tiktok.com/@muebles.inculma?_t=ZS-8ylWbVKnvs2&_r=1"
+        href="https://www.tiktok.com/@muebles.confortex"
         target="_blank"
         rel="noopener noreferrer"
         bg="#000000"

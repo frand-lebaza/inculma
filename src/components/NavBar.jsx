@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import logo1 from '../media/img/logo/logoBlanco.png';
-import logo2 from '../media/img/logo/logo3.png'; // Logo alternativo
+import logo1 from '../media/img/logo/Confortex-2000x500-removebg-preview.png'; // Logo principal
+import logo2 from '../media/img/logo/Confortex-2000x500-removebg-preview.png'; // Logo alternativo
 import CarritoDrawer from "./CarritoDrawer";
 
 function NavBar() {
@@ -139,7 +139,7 @@ const Nav = styled.nav`
 // Logo
 const Logo = styled(Link)`
   img {
-    width: 180px;
+    width: 250px;
     transition: all 0.3s ease;
   }
 `;

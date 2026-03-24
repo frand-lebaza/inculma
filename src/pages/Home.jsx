@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import img1 from '../media/img/muebles/1.jpeg'
-import logo from '../media/img/logo/logo3.png'
+import img1 from '../media/img/muebles/6.jpeg'
+import logo from '../media/img/logo/confortex-review.png'
 import sofaCama from '../media/img/muebles/62.jpeg'
 import mueble from '../media/img/muebles/sala3.jpeg'
 import comedor from '../media/img/comedores/comedor1.jpeg'
@@ -98,7 +98,7 @@ function Home() {
           <Title>Sobre Nosotros </Title>
           <Logo src={logo} alt="Logo empresa" />
           <Description>
-            En Muebles InCulma creamos espacios acogedores y con estilo.
+            En Muebles Confortex creamos espacios acogedores y con estilo.
             Nuestro compromiso es ofrecer muebles de alta calidad, con diseños
             únicos que combinan comodidad y elegancia. <br></br>
             Realizamos todo tipo de muebles para tu hogar u oficina. También refaccionamos tus muebles usados. Somos fabricantes y diseñadores con más de 25 años de experiencia
@@ -108,17 +108,16 @@ function Home() {
           <Title>Horario de atención </Title>
 
           <Description>
-            Lunes a Viernes: 09:30 a.m - 7:30 p.m  <br></br>
-            Fines de Semana y Festivos: 10:00 a.m - 03:30 p.m  <br></br>
+            Lunes a Sábados: 08:30 a.m - 6:00 p.m  <br></br>
             Atención en jornada continua<br></br>
           </Description>
           <Description>
             Puedes encontrarnos en nuestras redes sociales y seguir de cerca las mejores ofertas y nuevos productos.
           </Description>
           <Socials>
-            <a href="https://www.facebook.com/share/1GnTDPxLAK/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-            <a href="https://www.instagram.com/mueblesinculma?igsh=a2x5ZWx0NDkxaGRl&utm_source=qr" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://www.tiktok.com/@muebles.inculma?_t=ZS-8ylWbVKnvs2&_r=1" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
+            <a href="https://www.facebook.com/share/1CmecpqJcs/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/muebles_confortex" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://www.tiktok.com/@muebles.confortex" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
           </Socials>
         </ContentStyle>
       </ContentThree>
@@ -126,13 +125,13 @@ function Home() {
         <Title>Visita nuestras instalaciones </Title>
 
         <Description>
-          Estamos ubicados en Pitalito - Huila. <br></br>
-          Cl. 10 #1 98 <br></br>
+          Estamos ubicados en el centro de Pitalito - Huila. <br></br>
+          Carrera 6 # 6- 26 <br></br>
           <b>+57 315 0494180</b>
 
         </Description>
         <MapContainer>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d996.9336295097227!2d-76.04221707153835!3d1.851860340287355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e250b7fb1c9f729%3A0xad787aaa3e10eaeb!2sCl.%2010%20%23%201-98%2C%20Pitalito%2C%20Huila!5e0!3m2!1ses!2sco!4v1768782791609!5m2!1ses!2sco" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.7319222906676!2d-76.05205505606139!3d1.8530134933232465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e250b7d855a4243%3A0x64570dd813c5bc26!2sCra.%206%20%236-26%2C%20Pitalito%2C%20Huila!5e0!3m2!1ses!2sco!4v1774372959430!5m2!1ses!2sco" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </MapContainer>
       </ContentFour>
       <Footer />
@@ -268,7 +267,7 @@ const ContentThree = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 250px;
+  width: 300px;
   margin-bottom: 1rem;
 
     @media (max-width: 768px) {
