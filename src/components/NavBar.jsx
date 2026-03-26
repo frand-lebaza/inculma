@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import logo1 from '../media/img/logo/Confortex-2000x500-removebg-preview.png'; // Logo principal
-import logo2 from '../media/img/logo/Confortex-2000x500-removebg-preview.png'; // Logo alternativo
+import logo2 from '../media/img/logo/Confortex-2000x500-removebg-preview.png'; // Logo principal
+import logo1 from '../media/img/logo/logoblanco-removebg-preview.png'; // Logo alternativo
 import CarritoDrawer from "./CarritoDrawer";
 
 function NavBar() {
